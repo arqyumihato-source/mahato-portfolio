@@ -61,7 +61,7 @@ nav.scrolled{background:rgba(26,10,16,.93);backdrop-filter:blur(14px);}
 .meta{padding:16px 22px 20px;}
 .meta-type{font-size:8px;letter-spacing:.32em;text-transform:uppercase;color:var(--ki);margin-bottom:5px;}
 .meta-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;color:var(--kuro);}
-.meta-count{font-size:10px;color:rgba(160,120,64,.7);margin-top:6px;letter-spacing:.08em;}
+.meta-count{font-size:10px;color:rgba(160,120,64,.7);margin-top:6px;}
 .divider{display:flex;align-items:center;gap:16px;padding:0 48px;margin:56px 0 0;}
 .divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--ki),transparent);}
 .divider span{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--ki);opacity:.55;}
@@ -76,7 +76,6 @@ footer{padding:44px 48px;border-top:1px solid rgba(160,120,64,.28);display:flex;
 .ft-logo{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:21px;color:var(--shiro);letter-spacing:.2em;display:flex;align-items:center;gap:10px;}
 .ft-info{font-size:11px;letter-spacing:.14em;color:var(--washi);text-align:right;line-height:1.9;}
 .ft-info a{color:var(--ki);text-decoration:none;}
-/* LIGHTBOX */
 #lb{position:fixed;inset:0;z-index:200;background:rgba(26,10,16,.97);display:flex;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .4s;}
 #lb.open{opacity:1;pointer-events:all;}
 .lb-bar{padding:18px 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(160,120,64,.15);flex-shrink:0;}
@@ -85,11 +84,11 @@ footer{padding:44px 48px;border-top:1px solid rgba(160,120,64,.28);display:flex;
 .lb-proj-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--shiro);margin-top:3px;}
 .lb-bar-right{display:flex;align-items:center;gap:16px;}
 .lb-ctr{font-size:11px;letter-spacing:.2em;color:var(--washi);opacity:.6;}
-#lb-close{background:none;border:1px solid rgba(221,208,188,.3);color:var(--washi);font-size:14px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:none;transition:all .3s;flex-shrink:0;}
+#lb-close{background:none;border:1px solid rgba(221,208,188,.3);color:var(--washi);font-size:14px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:none;transition:all .3s;}
 #lb-close:hover{border-color:var(--ki);color:var(--ki);}
 .lb-stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 #lb-img{max-width:calc(100% - 120px);max-height:100%;object-fit:contain;display:block;}
-.lb-arr{position:absolute;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(221,208,188,.25);color:var(--washi);font-size:20px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:none;transition:all .3s;z-index:2;}
+.lb-arr{position:absolute;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(221,208,188,.25);color:var(--washi);font-size:20px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:none;transition:all .3s;}
 .lb-arr:hover{border-color:var(--ki);color:var(--ki);}
 #lb-prev{left:16px;}
 #lb-next{right:16px;}
@@ -112,11 +111,7 @@ footer{padding:44px 48px;border-top:1px solid rgba(160,120,64,.28);display:flex;
 </nav>
 <section id="hero">
   <div class="h-kanji">間</div>
-  <div class="h-content">
-    <div class="h-line"></div>
-    <div class="h-title">MAHATO</div>
-    <div class="h-sub">Onde o espaço encontra a essência</div>
-  </div>
+  <div class="h-content"><div class="h-line"></div><div class="h-title">MAHATO</div><div class="h-sub">Onde o espaço encontra a essência</div></div>
   <div class="h-scroll">Projetos</div>
 </section>
 <div class="stats">
@@ -125,10 +120,7 @@ footer{padding:44px 48px;border-top:1px solid rgba(160,120,64,.28);display:flex;
   <div><div class="stat-n">SP</div><div class="stat-l">São Paulo</div></div>
   <div><div class="stat-n">2021</div><div class="stat-l">Fundação</div></div>
 </div>
-<div class="sec-head" id="projetos">
-  <div class="sec-eye">Portfólio selecionado</div>
-  <div class="sec-title">Projetos</div>
-</div>
+<div class="sec-head" id="projetos"><div class="sec-eye">Portfólio selecionado</div><div class="sec-title">Projetos</div></div>
 <div id="filters">
   <span class="f-label">Filtrar por</span>
   <button class="fbtn on" data-f="all">Todos</button>
@@ -145,121 +137,69 @@ footer{padding:44px 48px;border-top:1px solid rgba(160,120,64,.28);display:flex;
     <div class="ab-line"></div>
     <div class="ab-h">Onde o espaço encontra a essência</div>
     <p class="ab-p">MAHATO nasce da harmonia entre o espaço e a nossa essência. Cada projeto é um convite para que a sua história encontre o lugar que ela merece.</p>
-    <p class="ab-p">O nome funde o conceito japonês MA/間 — "o espaço entre as coisas" — com a herança da arquiteta Thaís Yumi Hato. Uma identidade que traduz precisão, equilíbrio e profundidade em cada ambiente projetado.</p>
+    <p class="ab-p">O nome funde o conceito japonês MA/間 — "o espaço entre as coisas" — com a herança da arquiteta Thaís Yumi Hato.</p>
     <div class="ab-tag">Cotia · São Paulo · mahato.arq.br</div>
   </div>
 </section>
 <footer>
   <div class="ft-logo"><span style="font-family:'Noto Serif JP';color:var(--ki)">間</span>MAHATO</div>
-  <div class="ft-info">
-    <div>Arquitetura & Interiores</div>
-    <div><a href="https://instagram.com/mahato.arq" target="_blank">@mahato.arq</a> · <a href="http://mahato.arq.br" target="_blank">mahato.arq.br</a></div>
-    <div style="margin-top:4px;opacity:.45;font-size:10px">© 2025 MAHATO. Todos os direitos reservados.</div>
-  </div>
+  <div class="ft-info"><div>Arquitetura &amp; Interiores</div><div><a href="https://instagram.com/mahato.arq" target="_blank">@mahato.arq</a> · <a href="http://mahato.arq.br" target="_blank">mahato.arq.br</a></div><div style="margin-top:4px;opacity:.45;font-size:10px">&copy; 2025 MAHATO.</div></div>
 </footer>
 <div id="lb">
-  <div class="lb-bar">
-    <div class="lb-bar-left">
-      <div class="lb-proj-type" id="lb-type"></div>
-      <div class="lb-proj-name" id="lb-name"></div>
-    </div>
-    <div class="lb-bar-right">
-      <span class="lb-ctr" id="lb-ctr"></span>
-      <button id="lb-close">✕</button>
-    </div>
-  </div>
-  <div class="lb-stage">
-    <button class="lb-arr" id="lb-prev">&#8592;</button>
-    <img id="lb-img" src="" alt="">
-    <button class="lb-arr" id="lb-next">&#8594;</button>
-  </div>
+  <div class="lb-bar"><div class="lb-bar-left"><div class="lb-proj-type" id="lb-type"></div><div class="lb-proj-name" id="lb-name"></div></div><div class="lb-bar-right"><span class="lb-ctr" id="lb-ctr"></span><button id="lb-close">✕</button></div></div>
+  <div class="lb-stage"><button class="lb-arr" id="lb-prev">&#8592;</button><img id="lb-img" src="" alt=""><button class="lb-arr" id="lb-next">&#8594;</button></div>
   <div class="lb-strip" id="lb-strip"></div>
 </div>
 <script>
 const P=[
-  {id:'ricardo',name:'Projeto Ricardo',type:'Residencial',cat:'residencial',ratio:'tall',
-   imgs:['1pvE-j_bOu-PW7qR-K3mBWaY1iONBmbP9','1q1rY2tPIv3eFt0GZW9QfW0h9OrOBQeQN','1WbtRasnC3Ga6ogoBHsPVtlF2xCxTyDvq','1KJ4t-splT97BVCx4_-Xqm-rxRcLvnVjS','1CYjwleuL2eJ7fa_RzxSrivbNGkrv8Y8-','1QPH2PbpwP4PAtkhZR2B9G16pRVu5T0My','16HveYkJjqwCwryHJIwRKZoiV64sY2_Eq','1EyVuU-I4gbowNB9WOWKQDcMIPGkJxK3B','1DGouHllUKr8tGDuvvM1iw1xxL1YrV7Y3','1VPL8EvZAf9AiHhAi0_IpocFdixtdzuaE','1YdwnMkk0SmyLmmtZSMHsyCQqGqzk3-rk','1CoS05ex1yDu-65ewhjMNsBqP0CeAGvHJ','1wu0J92NhT3lJDrYXhEAqOxpwcwqIBAG8','1CnFEskLwGzDC1nQsKBJsTq7CjeqY4T6-','1a_rDWPi_s5wcfTBPW3ajH0mq7svg1WUu','1wHku_YXiwZVCY6_xUzkML1RvsNKVDre8']},
-  {id:'gustavo',name:'Escritório de Advocacia',type:'Comercial',cat:'comercial',ratio:'',
-   imgs:['1fJaQ2iC2tn_rwYs-vUgZHjMw53O1W28I','1VAV__cdJ0wpJWbDm96tlrKfYtgr36ugQ','1JsvZssSQeTrCvRAzjvzmDR49mqn6GaJL','1ZFORP9dHqvvhiL7c-NFLYynNnq8rYzyz','1YeCgS7CYPdOVObvHtgMC4rmG7mYTuGT0','1m2t60DMXgGIUBMG44jk4Y6YFwbvduSlX','1G8SgbDgLNuqapTaSK2wAeNz96bwtf1oG','1ZjupeUNpS0qyDkhkt6d_vyt-3W_iwnlE','1GjfGuhte41EQojx9LkUuWB5rIS45nkyQ','1GLEgYn6UE2K7jm2S66BmC7FDIFNd83p5','1Ei7ZQmtW-twu2K-0joTFEOoAe6ql5s2S','1jNcEhccliAiocSuG00_Xn2zbjZt2nCm7','1C-D_BhvbInyRdW8GHQ1SWx0EcB9HCzHG','1-9kwc6IxvozaOy8GVPNH5gBLD-mHX2MD','1pzwcoKlPpEErbbbdeQlLtQ8ntAo3rHxN','17PCzu8m7CcKebc1NslMe6uXWro_mBYu5','1eiwd_xaqT_wPywHAIx_H65iq9SWo8zwo','1dI3rkTveeJhJefPNPjJHtqneO49vXL09','1_5DvD6YsgVmWpuocCvEc6AwJHUv8udLQ','1LCfL-rGEFRlaO8-2zpg9rcGnazx2JGBz','1zJpIoiT5JrOF-IlxhaNJ_ptwIRP2KB-J','1j2KTDc5eZLu2Md5rVH4zxGbOpqeFnYU3','1Qnx28ju1cCI6hb8h_ZVOCsg8tbzW9fQF','1G3PuxH5Bt7arqW58SR0b6kDuqypql5kh','1kAI2XuPexcAUDqeralUaFikVwI_ByJAC']},
-  {id:'claudia3d',name:'Residência Claudia',type:'Residencial',cat:'residencial',ratio:'',
-   imgs:['1qERDUUXFlEND2I_7Q2K0-4hICzNj-7Qz','1s3nGOdCABE5ddMTZxcq8Nx8adkPTE_0o','1VMnwmA5BbDgE18rnOpYaclHCDFVjnXpC','1u-djH8j_bfi3YQcL_XIrAj0yH06K1jfa','1gWaKS54xlgdhG0k-86u6SFQkZ_ZFLqjl','1y7VQ2wh9B1JVJZwIRxzF2RarDcWreyxm','1T4kYQZqw5AArz9wWPoII_1mu6VBOw_c5','16dcPhZhK37WBT0us4zJmusv8a9TZ2iuj','1dJ1WlJ7YFT-CBZg9V7Os65cS12XHJwX5','1DpYGFD5jTlSvUR8Ds55NFxfeQ25SQTEV']},
-  {id:'noblesse-a',name:'Cond. Noblesse — Bloco A',type:'Incorporação',cat:'incorporacao',ratio:'wide',
-   imgs:['1QDUF8xFrYtfGzT34Vb9kCdkgTeSjXUiF','1bKSD5-7Q-TlqAq4BKD2mxnFIvYbZMz7j','1cd-gVU3c3CvWnjeb-As0zwkQImfqsRTW','1ljerrl2gDVkUupO_olOz-39FexjdV7Yi','1cWxOA7sXo02ykbz03CYjx_efN9nRL2aX','1W2fefmToI560vXYpGPswxm4ADtxIsskT','1j-2Jbm3ruhRvyCn_ozLjyryJDxt8tRb8','1oizjqVTLgtOEE1lTmnMhTiLx99Zufrog','1V25-bUDjji5xJ5JOQ7UVgsD4cgGFl8LJ']},
-  {id:'brinquedoteca',name:'Condomínio Gabi — Brinquedoteca',type:'Incorporação',cat:'incorporacao',ratio:'',
-   imgs:['17CrQA1-xFl79X0K8onYqNLLCUudEwrP1','1KDD7wHousYavv-jaAOTPU9zjKieiWC06','1BQ35Ubpu36SuISs7X6ojbZ67EZmzwg9z','1T6ht1DdvqyB1ChaGhvOXIF1e8aNNmgu1','1oARVS6UoBmFUWOJBVgti24pOKSyC_zcn','1DhN6xXXotjct8-X85SJ2l3o4KfNkVcet','1DHQuOP-MEdHEF8iVP-79ptr1xI5dkkA_']},
-  {id:'andre',name:'ManCave — André',type:'Residencial',cat:'residencial',ratio:'tall',
-   imgs:['1kmw9qlLMExRLeThVye3SzA7dJuUYyV7A','1PfddBCdjA8koLLWg4rmd7jswd-4W7Pnw','1iwd96Ui0dwYsDVub2mA9zuxMYjL6iR1A','1xUXemI1s1vthCwRGr8TBelVb4CHAjNjt','14TD0aQrS4MoDj9qN6gLZnIAvj5NMFQQx','14ysFoZSXIfkPod-VNC-czYYIN95KTfTc','1AbIIjeXU4zw8a0wQ-Q6uyfvnWx7ivYh3','1-McRqvxHNghg8P7KHrUHbyE6vkxs6seX']},
-  {id:'zs',name:'Condomínio ZS',type:'Incorporação',cat:'incorporacao',ratio:'',
-   imgs:['10VKu0dH7Agl69vsEiPQcoWDYyl_tpGUe','1lwBFVAXSyM3zDHl1vfnRis0KOqCKpHEi','1VfEGgwZPzmWX7OJxOXDvdv702mSaEFSk','1pKba8AJ_2GVcpBDaO_PttySnDE-FXwB7','1rkvD73yAJfq86bVAANR84Y1fijsJqJaP','19W_V20z5M1p8gf3S1R309TQoYcISkIlb','1IBiRl647ljty7SpjanZ0519f4xQDPknH','17gHhU-PjO_MOF9pJn3lvHSHJuLDqco39','11jsLyBjyvBonLNrHn_m849tzmYP3vqoO','1PPx3ECx0hszySR762LYTLc29wOyvyOPE','1sq6BbCVe9U2QualZXp7J4kO7EW7ZQP4Y','1WOrPErFnEwzsTdbdOyEddkBSVZkAGuug']},
-  {id:'rai',name:'Ap. Aclimação — Rai',type:'Residencial',cat:'residencial',ratio:'',
-   imgs:['1q_PNUbi4JbJx0IpBdEr_6NiDaUalHtHf','1P9O7TnPq1aefx2o_rGbN-Uu6rLmDyshe','1k4ba_7FVfujwjX3s-8NayADmOOCxA9Km','1st15exTX0nzAzo0-srazxO6tev3ppX2M','1mhjUGq5uNeTLxJdkvSG-3HkVvhpfserB','1NybxGnbQhSSc7ysfPjxIPeBxkDYHSDB9']},
-  {id:'cowork',name:'Condomínio Gabi — Cowork',type:'Incorporação',cat:'incorporacao',ratio:'wide',
-   imgs:['1bEFyiQ81aU7mpnzyluXOpvMbQqGrft4P','107vLm_I6i0EFIATZadfkXjMEHUJ8HFGC','1gyYG4aGToLMMLZKRZJb955F5ETOfZbFS','1dSLZdvZU36YVXmh14k68t-47B9sABPMq','16aCmMKLO4I9_Szuv_TMZAwVeGnNkTAe7','1WY0ux75IvLcLROJ-oXPnKMvFS5h5Ko7y','1TKZEagwVBABPOA5b0Qi-x4fTY3cXzahZ']},
-  {id:'banheiro-suite',name:'Suíte — Arq. Claudia',type:'Residencial',cat:'residencial',ratio:'tall',
-   imgs:['1WnQVp8kIhDQl9GRBYgDbx2XqVflC-sok','1kHY4V7mQ9PLC9Udn5nBee8aTFoabuSw-','1-qRHUWF-4RwqemuKGJP0kJXD6gEQczPn','1jpyxb5iqHTfqJ_KOg5jcACSfidJPC7G7']},
-  {id:'angela',name:'Projeto Angela — Cozinha & Banheiro',type:'Residencial',cat:'residencial',ratio:'',
-   imgs:['1IaaQUs72IcyvoUf4xvrZPkUhTW7hrd9e','1y8AecP5mxIUc76bJE_dUKZATxTugS_bH','1RMTvbM-LikdD5Six5eAL-0-qt6S2iWNe','1k1GbmQFyggnLp7pKXmvtUWBV7Ye1m9P2','1StjgByy1VsXTAE80jEA18Ku-btmcCRtq','1W8UmNGWFq1PTEH1R7pCb1bVLYg5imV3_','1cytvBEpXgB5iEEcJzqVVLoEz655oxICm']},
-  {id:'sala-jogos',name:'Condomínio Gabi — Sala de Jogos',type:'Incorporação',cat:'incorporacao',ratio:'',
-   imgs:['1i5Q5cRAbH7hdIUhftQ_s69Ocxc7Xhv73','1xh6XcIcaRpH2QMxUW2w0e4_Mzh4TIQEq','1xSZrppEwLWIrs9HxwizfDIt9Go_NkgaS','1sbSNZhNvtFaksJf8iMRgoaChGz32Oh7_','1P-ueiKTLvZw3nPyw-OtG03QmVmAfyNP8','1mfVqsdcONarMIlTb5L_7LFV7coCM4Byz','1OiACpHBja7qfr_5SBhJfziIvK7DrZ_iP']},
-  {id:'spii',name:'ManCave — SPII',type:'Residencial',cat:'residencial',ratio:'tall',
-   imgs:['16F7CHwr4YbOFsfOmc_Ua9Gw0WOpR_CFf','18EuzOxcnXRguD8UxS5JriVJ3hEm9l_x_','1x1jjRA-lZm5xhgUxRhcpu4jnGLOBN8On','1LlOj2Ux7FvyEOhcQ4fJG7xXyFTrGvRDF','1_pnbCjQiZYD2JIQUHfnJy2f74_UmEeLT','15c1v_4ZQkTytSV3IwD9AvfDniWLj3-ih','15Z-UVIEkFt4QUvAvFCD8LsEa7LDJQz_7','1NprvwmKLrxHsPLh6AtsujTLh80SjNmBF','1fWmwQ_UK_vCzpoStbiia3Dpvzd8jDKJH','1tsUErcTiLl6MtdgkvEnbutjwbecXku_M','1QNvlbo77AfA82FBLn8z9-CHOJA-bu4bU','1mzud6dPAth3dCbaNqxHw8eD5yB-C156J','1MpC-1RpWS1Wkq7WCQzQ6-5wN9HQGbQ38']},
-  {id:'diego',name:'Projeto Diego',type:'Residencial',cat:'residencial',ratio:'',
-   imgs:['16TsW574lcU1BKoU4-piyB0OInk9TBrO_','1eNXmMgJZn8NLYT4pSOtoMNR-Zqz_bV74','1AUjSIF-GKd2MhZcEhI2SD088DTN_dRBd','1Z4v_cvqRRDF72Etle-OI9JRdFReG8US2','1wHTGTHKq7OcX48dcsaTMsDLVck6vlhqS','17AV4S1DMVi-fRiDodkzkhd4EpWz3SpzZ','1MAnncharTZB7aC8nLUqiZQ4T64z66oS6']},
-  {id:'noblesse-b',name:'Cond. Noblesse — Bloco B',type:'Incorporação',cat:'incorporacao',ratio:'wide',
-   imgs:['1aQaM7LHhufS33vvETNeEirdR5ol-YqRj','1qa6H7cIroUxSnjeiVvVbrrKEMfS8Ghn-','1wf3416DXICxIDpksgcGaz14WLL3QIayu','1lv0Uyqiva4alAoAM02OUovkLz4m6rDPJ']},
-  {id:'parque',name:'Condomínio Gabi — Parque',type:'Incorporação',cat:'incorporacao',ratio:'',
-   imgs:['1UYLXyP5peaBaas9xpOrASxMbYQ3pYyI4','1cwQamSSMVmx0cjc8I0mIUaMKAxpERUpm','16dTSB7E98d9_SJtJLaw6b1IwLVzbS0c5','1xm_lRpSIJ92ncPgPd3clzBHqCOVYPyYi','1xYlmUyOV7qDxEALAD5Czt-J6L10hcus_']},
-  {id:'central',name:'Central de Monitoramento',type:'Corporativo',cat:'corporativo',ratio:'',
-   imgs:['1c9HJu9BEzP8dSGT1qzKsAA4aKPjZMGJV']},
-  {id:'dormitorio',name:'Dormitório — Automobilístico',type:'Residencial',cat:'residencial',ratio:'',
-   imgs:['11mC_cme_mnMutKcoxU8ENk0WCxWyvKrn','1MAequpuQemsIu99ikeiTypArtJu-fsA-','1nqt8arT7rDthNm8Qd6IuV-QzGR-ybquF']},
-  {id:'escritorio',name:'Escritório — Arq. Claudia',type:'Residencial',cat:'residencial',ratio:'',
-   imgs:['1rx-kGPOdHXT5EPFJcGo6PC-iDy4yAWo0','11Q2ZYNaQsbJa80oEYe7sFAW5r2fryHDW','19x5D-AjBOWTMG_yRa0De9aHX964-WLQF']}
+  {id:'ricardo',name:'Projeto Ricardo',type:'Residencial',cat:'residencial',ratio:'tall',imgs:['1pvE-j_bOu-PW7qR-K3mBWaY1iONBmbP9','1q1rY2tPIv3eFt0GZW9QfW0h9OrOBQeQN','1WbtRasnC3Ga6ogoBHsPVtlF2xCxTyDvq','1KJ4t-splT97BVCx4_-Xqm-rxRcLvnVjS','1CYjwleuL2eJ7fa_RzxSrivbNGkrv8Y8-','1QPH2PbpwP4PAtkhZR2B9G16pRVu5T0My','16HveYkJjqwCwryHJIwRKZoiV64sY2_Eq','1EyVuU-I4gbowNB9WOWKQDcMIPGkJxK3B','1DGouHllUKr8tGDuvvM1iw1xxL1YrV7Y3','1VPL8EvZAf9AiHhAi0_IpocFdixtdzuaE','1YdwnMkk0SmyLmmtZSMHsyCQqGqzk3-rk','1CoS05ex1yDu-65ewhjMNsBqP0CeAGvHJ','1wu0J92NhT3lJDrYXhEAqOxpwcwqIBAG8','1CnFEskLwGzDC1nQsKBJsTq7CjeqY4T6-','1a_rDWPi_s5wcfTBPW3ajH0mq7svg1WUu','1wHku_YXiwZVCY6_xUzkML1RvsNKVDre8']},
+  {id:'gustavo',name:'Escritório de Advocacia',type:'Comercial',cat:'comercial',ratio:'',imgs:['1fJaQ2iC2tn_rwYs-vUgZHjMw53O1W28I','1VAV__cdJ0wpJWbDm96tlrKfYtgr36ugQ','1JsvZssSQeTrCvRAzjvzmDR49mqn6GaJL','1ZFORP9dHqvvhiL7c-NFLYynNnq8rYzyz','1YeCgS7CYPdOVObvHtgMC4rmG7mYTuGT0','1m2t60DMXgGIUBMG44jk4Y6YFwbvduSlX','1G8SgbDgLNuqapTaSK2wAeNz96bwtf1oG','1ZjupeUNpS0qyDkhkt6d_vyt-3W_iwnlE','1GjfGuhte41EQojx9LkUuWB5rIS45nkyQ','1GLEgYn6UE2K7jm2S66BmC7FDIFNd83p5','1Ei7ZQmtW-twu2K-0joTFEOoAe6ql5s2S','1jNcEhccliAiocSuG00_Xn2zbjZt2nCm7','1C-D_BhvbInyRdW8GHQ1SWx0EcB9HCzHG','1-9kwc6IxvozaOy8GVPNH5gBLD-mHX2MD','1pzwcoKlPpEErbbbdeQlLtQ8ntAo3rHxN','17PCzu8m7CcKebc1NslMe6uXWro_mBYu5','1eiwd_xaqT_wPywHAIx_H65iq9SWo8zwo','1dI3rkTveeJhJefPNPjJHtqneO49vXL09','1_5DvD6YsgVmWpuocCvEc6AwJHUv8udLQ','1LCfL-rGEFRlaO8-2zpg9rcGnazx2JGBz','1zJpIoiT5JrOF-IlxhaNJ_ptwIRP2KB-J','1j2KTDc5eZLu2Md5rVH4zxGbOpqeFnYU3','1Qnx28ju1cCI6hb8h_ZVOCsg8tbzW9fQF','1G3PuxH5Bt7arqW58SR0b6kDuqypql5kh','1kAI2XuPexcAUDqeralUaFikVwI_ByJAC']},
+  {id:'claudia3d',name:'Residência Claudia',type:'Residencial',cat:'residencial',ratio:'',imgs:['1qERDUUXFlEND2I_7Q2K0-4hICzNj-7Qz','1s3nGOdCABE5ddMTZxcq8Nx8adkPTE_0o','1VMnwmA5BbDgE18rnOpYaclHCDFVjnXpC','1u-djH8j_bfi3YQcL_XIrAj0yH06K1jfa','1gWaKS54xlgdhG0k-86u6SFQkZ_ZFLqjl','1y7VQ2wh9B1JVJZwIRxzF2RarDcWreyxm','1T4kYQZqw5AArz9wWPoII_1mu6VBOw_c5','16dcPhZhK37WBT0us4zJmusv8a9TZ2iuj','1dJ1WlJ7YFT-CBZg9V7Os65cS12XHJwX5','1DpYGFD5jTlSvUR8Ds55NFxfeQ25SQTEV']},
+  {id:'noblesse-a',name:'Cond. Noblesse — Bloco A',type:'Incorporação',cat:'incorporacao',ratio:'wide',imgs:['1QDUF8xFrYtfGzT34Vb9kCdkgTeSjXUiF','1bKSD5-7Q-TlqAq4BKD2mxnFIvYbZMz7j','1cd-gVU3c3CvWnjeb-As0zwkQImfqsRTW','1ljerrl2gDVkUupO_olOz-39FexjdV7Yi','1cWxOA7sXo02ykbz03CYjx_efN9nRL2aX','1W2fefmToI560vXYpGPswxm4ADtxIsskT','1j-2Jbm3ruhRvyCn_ozLjyryJDxt8tRb8','1oizjqVTLgtOEE1lTmnMhTiLx99Zufrog','1V25-bUDjji5xJ5JOQ7UVgsD4cgGFl8LJ']},
+  {id:'brinquedoteca',name:'Condomínio Gabi — Brinquedoteca',type:'Incorporação',cat:'incorporacao',ratio:'',imgs:['17CrQA1-xFl79X0K8onYqNLLCUudEwrP1','1KDD7wHousYavv-jaAOTPU9zjKieiWC06','1BQ35Ubpu36SuISs7X6ojbZ67EZmzwg9z','1T6ht1DdvqyB1ChaGhvOXIF1e8aNNmgu1','1oARVS6UoBmFUWOJBVgti24pOKSyC_zcn','1DhN6xXXotjct8-X85SJ2l3o4KfNkVcet','1DHQuOP-MEdHEF8iVP-79ptr1xI5dkkA_']},
+  {id:'andre',name:'ManCave — André',type:'Residencial',cat:'residencial',ratio:'tall',imgs:['1kmw9qlLMExRLeThVye3SzA7dJuUYyV7A','1PfddBCdjA8koLLWg4rmd7jswd-4W7Pnw','1iwd96Ui0dwYsDVub2mA9zuxMYjL6iR1A','1xUXemI1s1vthCwRGr8TBelVb4CHAjNjt','14TD0aQrS4MoDj9qN6gLZnIAvj5NMFQQx','14ysFoZSXIfkPod-VNC-czYYIN95KTfTc','1AbIIjeXU4zw8a0wQ-Q6uyfvnWx7ivYh3','1-McRqvxHNghg8P7KHrUHbyE6vkxs6seX']},
+  {id:'zs',name:'Condomínio ZS',type:'Incorporação',cat:'incorporacao',ratio:'',imgs:['10VKu0dH7Agl69vsEiPQcoWDYyl_tpGUe','1lwBFVAXSyM3zDHl1vfnRis0KOqCKpHEi','1VfEGgwZPzmWX7OJxOXDvdv702mSaEFSk','1pKba8AJ_2GVcpBDaO_PttySnDE-FXwB7','1rkvD73yAJfq86bVAANR84Y1fijsJqJaP','19W_V20z5M1p8gf3S1R309TQoYcISkIlb','1IBiRl647ljty7SpjanZ0519f4xQDPknH','17gHhU-PjO_MOF9pJn3lvHSHJuLDqco39','11jsLyBjyvBonLNrHn_m849tzmYP3vqoO','1PPx3ECx0hszySR762LYTLc29wOyvyOPE','1sq6BbCVe9U2QualZXp7J4kO7EW7ZQP4Y','1WOrPErFnEwzsTdbdOyEddkBSVZkAGuug']},
+  {id:'rai',name:'Ap. Aclimação — Rai',type:'Residencial',cat:'residencial',ratio:'',imgs:['1q_PNUbi4JbJx0IpBdEr_6NiDaUalHtHf','1P9O7TnPq1aefx2o_rGbN-Uu6rLmDyshe','1k4ba_7FVfujwjX3s-8NayADmOOCxA9Km','1st15exTX0nzAzo0-srazxO6tev3ppX2M','1mhjUGq5uNeTLxJdkvSG-3HkVvhpfserB','1NybxGnbQhSSc7ysfPjxIPeBxkDYHSDB9']},
+  {id:'cowork',name:'Condomínio Gabi — Cowork',type:'Incorporação',cat:'incorporacao',ratio:'wide',imgs:['1bEFyiQ81aU7mpnzyluXOpvMbQqGrft4P','107vLm_I6i0EFIATZadfkXjMEHUJ8HFGC','1gyYG4aGToLMMLZKRZJb955F5ETOfZbFS','1dSLZdvZU36YVXmh14k68t-47B9sABPMq','16aCmMKLO4I9_Szuv_TMZAwVeGnNkTAe7','1WY0ux75IvLcLROJ-oXPnKMvFS5h5Ko7y','1TKZEagwVBABPOA5b0Qi-x4fTY3cXzahZ']},
+  {id:'banheiro-suite',name:'Suíte — Arq. Claudia',type:'Residencial',cat:'residencial',ratio:'tall',imgs:['1WnQVp8kIhDQl9GRBYgDbx2XqVflC-sok','1kHY4V7mQ9PLC9Udn5nBee8aTFoabuSw-','1-qRHUWF-4RwqemuKGJP0kJXD6gEQczPn','1jpyxb5iqHTfqJ_KOg5jcACSfidJPC7G7']},
+  {id:'angela',name:'Projeto Angela — Cozinha & Banheiro',type:'Residencial',cat:'residencial',ratio:'',imgs:['1IaaQUs72IcyvoUf4xvrZPkUhTW7hrd9e','1y8AecP5mxIUc76bJE_dUKZATxTugS_bH','1RMTvbM-LikdD5Six5eAL-0-qt6S2iWNe','1k1GbmQFyggnLp7pKXmvtUWBV7Ye1m9P2','1StjgByy1VsXTAE80jEA18Ku-btmcCRtq','1W8UmNGWFq1PTEH1R7pCb1bVLYg5imV3_','1cytvBEpXgB5iEEcJzqVVLoEz655oxICm']},
+  {id:'sala-jogos',name:'Condomínio Gabi — Sala de Jogos',type:'Incorporação',cat:'incorporacao',ratio:'',imgs:['1i5Q5cRAbH7hdIUhftQ_s69Ocxc7Xhv73','1xh6XcIcaRpH2QMxUW2w0e4_Mzh4TIQEq','1xSZrppEwLWIrs9HxwizfDIt9Go_NkgaS','1sbSNZhNvtFaksJf8iMRgoaChGz32Oh7_','1P-ueiKTLvZw3nPyw-OtG03QmVmAfyNP8','1mfVqsdcONarMIlTb5L_7LFV7coCM4Byz','1OiACpHBja7qfr_5SBhJfziIvK7DrZ_iP']},
+  {id:'spii',name:'ManCave — SPII',type:'Residencial',cat:'residencial',ratio:'tall',imgs:['16F7CHwr4YbOFsfOmc_Ua9Gw0WOpR_CFf','18EuzOxcnXRguD8UxS5JriVJ3hEm9l_x_','1x1jjRA-lZm5xhgUxRhcpu4jnGLOBN8On','1LlOj2Ux7FvyEOhcQ4fJG7xXyFTrGvRDF','1_pnbCjQiZYD2JIQUHfnJy2f74_UmEeLT','15c1v_4ZQkTytSV3IwD9AvfDniWLj3-ih','15Z-UVIEkFt4QUvAvFCD8LsEa7LDJQz_7','1NprvwmKLrxHsPLh6AtsujTLh80SjNmBF','1fWmwQ_UK_vCzpoStbiia3Dpvzd8jDKJH','1tsUErcTiLl6MtdgkvEnbutjwbecXku_M','1QNvlbo77AfA82FBLn8z9-CHOJA-bu4bU','1mzud6dPAth3dCbaNqxHw8eD5yB-C156J','1MpC-1RpWS1Wkq7WCQzQ6-5wN9HQGbQ38']},
+  {id:'diego',name:'Projeto Diego',type:'Residencial',cat:'residencial',ratio:'',imgs:['16TsW574lcU1BKoU4-piyB0OInk9TBrO_','1eNXmMgJZn8NLYT4pSOtoMNR-Zqz_bV74','1AUjSIF-GKd2MhZcEhI2SD088DTN_dRBd','1Z4v_cvqRRDF72Etle-OI9JRdFReG8US2','1wHTGTHKq7OcX48dcsaTMsDLVck6vlhqS','17AV4S1DMVi-fRiDodkzkhd4EpWz3SpzZ','1MAnncharTZB7aC8nLUqiZQ4T64z66oS6']},
+  {id:'noblesse-b',name:'Cond. Noblesse — Bloco B',type:'Incorporação',cat:'incorporacao',ratio:'wide',imgs:['1aQaM7LHhufS33vvETNeEirdR5ol-YqRj','1qa6H7cIroUxSnjeiVvVbrrKEMfS8Ghn-','1wf3416DXICxIDpksgcGaz14WLL3QIayu','1lv0Uyqiva4alAoAM02OUovkLz4m6rDPJ']},
+  {id:'parque',name:'Condomínio Gabi — Parque',type:'Incorporação',cat:'incorporacao',ratio:'',imgs:['1UYLXyP5peaBaas9xpOrASxMbYQ3pYyI4','1cwQamSSMVmx0cjc8I0mIUaMKAxpERUpm','16dTSB7E98d9_SJtJLaw6b1IwLVzbS0c5','1xm_lRpSIJ92ncPgPd3clzBHqCOVYPyYi','1xYlmUyOV7qDxEALAD5Czt-J6L10hcus_']},
+  {id:'central',name:'Central de Monitoramento',type:'Corporativo',cat:'corporativo',ratio:'',imgs:['1c9HJu9BEzP8dSGT1qzKsAA4aKPjZMGJV']},
+  {id:'dormitorio',name:'Dorm. — Automotivo',type:'Residencial',cat:'residencial',ratio:'',imgs:['11mC_cme_mnMutKcoxU8ENk0WCxWyvKrn','1MAequpuQemsIu99ikeiTypArtJu-fsA-','1nqt8arT7rDthNm8Qd6IuV-QzGR-ybquF']},
+  {id:'escritorio',name:'Escritório — Arq. Claudia',type:'Residencial',cat:'residencial',ratio:'',imgs:['1rx-kGPOdHXT5EPFJcGo6PC-iDy4yAWo0','11Q2ZYNaQsbJa80oEYe7sFAW5r2fryHDW','19x5D-AjBOWTMG_yRa0De9aHX964-WLQF']}
 ];
-const th=id=>`https://drive.google.com/thumbnail?id=${id}&sz=w600`;
-const full=id=>`https://drive.google.com/thumbnail?id=${id}&sz=w1800`;
-// Build grid
+const th=id=>'https://drive.google.com/thumbnail?id='+id+'&sz=w600';
+const full=id=>'https://drive.google.com/thumbnail?id='+id+'&sz=w1800';
 const grid=document.getElementById('grid');
 P.forEach(p=>{
   const c=document.createElement('div');
   c.className='card';c.dataset.cat=p.cat;c.dataset.pid=p.id;
-  c.innerHTML=`<div class="img-wrap ${p.ratio}"><div class="ph"><span>間</span></div><img src="${th(p.imgs[0])}" alt="${p.name}" loading="lazy" onload="this.previousElementSibling.remove()"><div class="overlay"><div><div class="ov-type">${p.type}</div><div class="ov-name">${p.name}</div></div></div></div><div class="meta"><div class="meta-type">${p.type}</div><div class="meta-name">${p.name}</div><div class="meta-count">${p.imgs.length} ${p.imgs.length===1?'imagem':'imagens'} · clique para ver todas</div></div>`;
+  c.innerHTML='<div class="img-wrap '+p.ratio+'"><div class="ph"><span>間</span></div><img src="'+th(p.imgs[0])+'" alt="'+p.name+'" loading="lazy" onload="this.previousElementSibling.remove()"><div class="overlay"><div><div class="ov-type">'+p.type+'</div><div class="ov-name">'+p.name+'</div></div></div></div><div class="meta"><div class="meta-type">'+p.type+'</div><div class="meta-name">'+p.name+'</div><div class="meta-count">'+p.imgs.length+' '+(p.imgs.length===1?'imagem':'imagens')+' · clique para ver todas</div></div>';
   grid.appendChild(c);
 });
-// Cursor
 const cur=document.getElementById('cur');
 document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';});
 document.querySelectorAll('a,button,.card,.fbtn').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('big'));el.addEventListener('mouseleave',()=>cur.classList.remove('big'));});
-// Nav
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>70));
-// Reveal
 const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*70);obs.unobserve(e.target);}});},{threshold:0.08});
 document.querySelectorAll('.card').forEach(c=>obs.observe(c));
-// Filter
 document.querySelectorAll('.fbtn').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));b.classList.add('on');const f=b.dataset.f;document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hide',f!=='all'&&c.dataset.cat!==f));});});
-// Lightbox
 const lb=document.getElementById('lb'),lbImg=document.getElementById('lb-img'),lbName=document.getElementById('lb-name'),lbType=document.getElementById('lb-type'),lbCtr=document.getElementById('lb-ctr'),lbStrip=document.getElementById('lb-strip');
-let cur_p=null,cur_i=0;
-function open_lb(p,i){
-  cur_p=p;cur_i=i;
-  lbName.textContent=p.name;lbType.textContent=p.type;
-  lbStrip.innerHTML='';
-  p.imgs.forEach((id,idx)=>{const t=document.createElement('img');t.className='lb-th';t.src=th(id);t.addEventListener('click',()=>show(idx));lbStrip.appendChild(t);});
-  show(i);lb.classList.add('open');document.body.style.overflow='hidden';
-}
-function show(i){
-  cur_i=i;lbImg.src=full(cur_p.imgs[i]);lbCtr.textContent=(i+1)+' / '+cur_p.imgs.length;
-  document.querySelectorAll('.lb-th').forEach((t,idx)=>t.classList.toggle('on',idx===i));
-  lbStrip.children[i]?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
-}
-function nav(d){show((cur_i+d+cur_p.imgs.length)%cur_p.imgs.length);}
-function close_lb(){lb.classList.remove('open');document.body.style.overflow='';}
-document.querySelectorAll('.card').forEach(c=>{c.addEventListener('click',()=>{const p=P.find(p=>p.id===c.dataset.pid);if(p)open_lb(p,0);});});
-document.getElementById('lb-close').addEventListener('click',close_lb);
+let cp=null,ci=0;
+function openLb(p,i){cp=p;ci=i;lbName.textContent=p.name;lbType.textContent=p.type;lbStrip.innerHTML='';p.imgs.forEach((id,idx)=>{const t=document.createElement('img');t.className='lb-th';t.src=th(id);t.addEventListener('click',()=>show(idx));lbStrip.appendChild(t);});show(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function show(i){ci=i;lbImg.src=full(cp.imgs[i]);lbCtr.textContent=(i+1)+' / '+cp.imgs.length;document.querySelectorAll('.lb-th').forEach((t,idx)=>t.classList.toggle('on',idx===i));lbStrip.children[i]?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});}
+function nav(d){show((ci+d+cp.imgs.length)%cp.imgs.length);}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.card').forEach(c=>{c.addEventListener('click',()=>{const p=P.find(p=>p.id===c.dataset.pid);if(p)openLb(p,0);});});
+document.getElementById('lb-close').addEventListener('click',closeLb);
 document.getElementById('lb-prev').addEventListener('click',()=>nav(-1));
 document.getElementById('lb-next').addEventListener('click',()=>nav(1));
-lb.addEventListener('click',e=>{if(e.target===lb)close_lb();});
-document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close_lb();if(e.key==='ArrowLeft')nav(-1);if(e.key==='ArrowRight')nav(1);});
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')nav(-1);if(e.key==='ArrowRight')nav(1);});
 </script>
 </body>
 </html>
